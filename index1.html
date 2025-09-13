@@ -226,149 +226,172 @@ h1, h2, h3, h4, h5, h6 {
 					<!-- VIP Table - Elementor HTML widget -->
 <style>
   :root{
-    --vip-bg:#0f1216; --vip-surface:#151a20; --vip-muted:#8fa1b3; --vip-text:#e8eef5; --vip-accent:#3ecf8e; --vip-border:#26313b;
-  }
- .vip-wrap {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;       /* এখানে 100–900 এর মধ্যে যা দরকার সেট করো */
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-  color: var(--vip-text);
-}
-
-.vip-card {
-  background: var(--vip-surface);
-  border: 1px solid var(--vip-border);
-  border-radius: 14px;
-  overflow: hidden;
-  padding: 0;
-  width: 1200px;   
-  margin: 0 auto;     
-}
-  /* Desktop table */
-  .vip-table{width:100%; border-collapse:separate; border-spacing:0}
-  .vip-table th,.vip-table td{padding:14px 16px;border-bottom:1px solid var(--vip-border);text-align:center;white-space:nowrap}
-  .vip-table thead th{position:sticky;top:0;background:var(--vip-surface);z-index:1;font-weight:700}
-  .vip-table td:first-child,.vip-table th:first-child{text-align:left}
-  .vip-table tr.section th{background:var(--vip-bg);text-align:left;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--e-global-color-4b1d19e)}
-
-  .vip-title {
-  margin: 0 auto;     
-  text-align: center;  
-  display: block; 
-    text-transform: uppercase;
-    font-size: 1rem;  
-}
-.vip-badge {
-  display: inline-block;
-    text-transform: uppercase;
-  font-size: 1rem;        
-  font-weight: 600;
-}
-
-.vip-check {
-  color: var(--vip-accent);
-  font-weight: 900;
-  font-size: 1rem;
-}
-
-.vip-dash {
-  opacity: .6;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-
-  /* Mobile mode (two-column with tabs) */
-  .vip-mob {
-  display: none;
-  background: var(--vip-surface);   /* ✅ ডিফল্ট surface bg */
-  border: 1px solid var(--vip-border);
-  border-radius: 14px;
-}
-
-@media (max-width:1023px) {
-  .vip-desk { display: none; }
-  .vip-mob { display: block; }
-
-  .vip-tabs {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding: 10px;
-    background: var(--vip-surface);   /* ✅ আগে var(--vip-bg) ছিল */
-    border-bottom: 1px solid var(--vip-border);
+    --vip-bg:#0f1216;
+    --vip-surface:#151a20;
+    --vip-muted:#8fa1b3;
+    --vip-text:#e8eef5;
+    --vip-accent:#3ecf8e;
+    --vip-border:#26313b;
   }
 
-  .vip-tab {
-    flex: 0 0 auto;
-    padding: .55rem .9rem;
-    border: 1px solid var(--vip-border);
-    border-radius: 999px;
-    opacity: .85;
-    cursor: pointer;
-    background: var(--vip-bg);        /* ✅ ছোট contrast effect */
+  .vip-wrap {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;       /* 100–900 এর মধ্যে যেটা দরকার সেট করো */
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
     color: var(--vip-text);
   }
 
-  .vip-tab[aria-selected="true"] {
-    border-color: var(--vip-accent);
-    box-shadow: 0 0 0 2px rgba(62, 207, 142, 0.25);
-    background: var(--vip-surface);   /* ✅ active হলে surface */
-    color: var(--vip-accent);
-  }
-
-  .vip-grid {
-    display: grid;
-    grid-template-columns: minmax(48%, 380px) 1fr;
-  }
-
-  .vip-left {
-    position: sticky;
-    left: 0;
-    align-self: start;
+  .vip-card {
     background: var(--vip-surface);
-    border-right: 1px solid var(--vip-border);
-    z-index: 2;
+    border: 1px solid var(--vip-border);
+    border-radius: 14px;
+    overflow: hidden;
+    padding: 0;
+    width: 1200px;   
+    margin: 0 auto;     
   }
 
-  .vip-left .row,
-  .vip-right .row {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 12px 14px;
-    border-bottom: 1px solid var(--vip-border);
+  /* Desktop table */
+  .vip-table {
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0
+  }
+  .vip-table th,
+  .vip-table td {
+    padding:14px 16px;
+    border-bottom:1px solid var(--vip-border);
+    text-align:center;
+    white-space:nowrap
+  }
+  .vip-table thead th {
+    position:sticky;
+    top:0;
+    z-index:1;
+    font-weight:700
+  }
+  .vip-table td:first-child,
+  .vip-table th:first-child { text-align:left }
+
+  .vip-table tr.section th {
+    background:var(--vip-bg);
+    text-align:left;
+    font-size:13px;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    color:var(--e-global-color-4b1d19e); /* ✅ Elementor global color */
   }
 
-  .vip-left .row { font-weight: 600; color: var(--vip-text); }
-  .vip-right .row { color: var(--vip-text); }
-
-  .vip-head {
-    padding: 12px 14px;
-    border-bottom: 1px solid var(--vip-border);
-    background: var(--vip-bg);
-    font-size: 13px;
-    color: var(--vip-muted);
+  .vip-title {
+    margin: 0 auto;     
+    text-align: center;  
+    display: block; 
     text-transform: uppercase;
-    letter-spacing: .04em;
+    font-size: 1rem;  
   }
-}
 
-    
- /* Hide scrollbar but keep swipe scroll */
-.vip-tabs::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-.vip-tabs {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
+  .vip-badge {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1rem;        
+    font-weight: 600;
+  }
 
-    
-  
+  .vip-check {
+    color: var(--vip-accent);
+    font-weight: 900;
+    font-size: 1rem;
+  }
+
+  .vip-dash {
+    opacity: .6;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  /* Mobile mode (two-column with tabs) */
+  .vip-mob {
+    display: none;
+    background: var(--vip-surface);   /* ✅ ডিফল্ট surface bg */
+    border: 1px solid var(--vip-border);
+    border-radius: 14px;
+  }
+
+  @media (max-width:1023px) {
+    .vip-desk { display: none; }
+    .vip-mob { display: block; }
+
+    .vip-tabs {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px;
+      background: var(--vip-surface);   /* ✅ আগে var(--vip-bg) ছিল */
+      border-bottom: 1px solid var(--vip-border);
+    }
+
+    .vip-tab {
+      flex: 0 0 auto;
+      padding: .55rem .9rem;
+      border: 1px solid var(--vip-border);
+      border-radius: 999px;
+      opacity: .85;
+      cursor: pointer;
+      background: var(--vip-bg);        /* ✅ ছোট contrast effect */
+      color: var(--vip-text);
+    }
+
+    .vip-tab[aria-selected="true"] {
+      border-color: var(--vip-accent);
+      box-shadow: 0 0 0 2px rgba(62, 207, 142, 0.25);
+      background: var(--vip-surface);   /* ✅ active হলে surface */
+      color: var(--vip-accent);
+    }
+
+    .vip-grid {
+      display: grid;
+      grid-template-columns: minmax(48%, 380px) 1fr;
+    }
+
+    .vip-left {
+      position: sticky;
+      left: 0;
+      align-self: start;
+      background: var(--vip-surface);
+      border-right: 1px solid var(--vip-border);
+      z-index: 2;
+    }
+
+    .vip-left .row,
+    .vip-right .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--vip-border);
+    }
+
+    .vip-left .row { font-weight: 600; color: var(--vip-text); }
+    .vip-right .row { color: var(--vip-text); }
+
+    .vip-head {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--vip-border);
+      background: var(--vip-bg);
+      font-size: 13px;
+      color: var(--vip-muted);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+  }
+
+  /* Hide scrollbar but keep swipe scroll */
+  .vip-tabs::-webkit-scrollbar { display: none; } /* Chrome, Safari */
+  .vip-tabs { -ms-overflow-style: none; scrollbar-width: none; } /* Edge, Firefox */
 </style>
+
 
 <div class="vip-wrap">
   <!-- DESKTOP -->
